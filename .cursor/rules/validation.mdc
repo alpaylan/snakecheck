@@ -1,0 +1,8 @@
+---
+description: Create validation artifacts 
+globs:
+alwaysApply: false
+---
+
+- Always give the user a succinct set of commands to validate the outputs
+- Create small scripts, visualizations, short textual explanations to allow the user the grasp the effects of the changes

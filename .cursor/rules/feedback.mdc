@@ -1,0 +1,11 @@
+---
+description: Rules for seeking feedback from the environment
+globs:
+alwaysApply: true
+---
+
+- Always check for the typechecking and linting hints and fix accordingly.
+- Run ruff
+- For each style suggestion, either apply them, or add them as allowed so that there are no remaining lints
+- Run mypy
+- Run tests after every change using pytest

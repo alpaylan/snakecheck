@@ -1,0 +1,40 @@
+[project]
+dependencies = []
+description = "Add your description here"
+name = "snakecheck"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+
+[tool.ruff]
+# Enable lints + fixes
+line-length = 100
+lint.extend-select = ["I", "UP", "B", "SIM"]
+target-version = "py312"
+
+[tool.ruff.format]
+# Ruff formatter (Black-compatible)
+indent-style = "space"
+quote-style = "double"
+
+[tool.mypy]
+ignore_missing_imports = false
+plugins = []
+python_version = "3.12"
+strict = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_ignores = true
+# If you use snakecheck/ layout:
+mypy_path = ["snakecheck"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["snakecheck"]
+
+[tool.uv]
+dev-dependencies = [
+  "mypy>=1.17.1",
+  "pytest>=8.4.1",
+  "ruff>=0.12.9",
+]
